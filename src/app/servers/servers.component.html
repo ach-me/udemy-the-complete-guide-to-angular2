@@ -1,12 +1,18 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>  
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+    >Add Server</button>  
 <!-- [] indican a Angular que estamos usando property binding -->
+<!-- () indican que se está usando event binding-->
+
 
 <!-- Tipos de data binding -->
 
 <!-- Property binging -->
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- String interpolation -->
-<p>{{allowNewServer}}</p>
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>

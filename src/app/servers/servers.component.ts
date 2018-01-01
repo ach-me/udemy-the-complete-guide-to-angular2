@@ -8,18 +8,21 @@ import { setTimeout } from 'timers';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
 
-  constructor() {
-    // Metodo ejecutado al momento en que este componente es creado por Angular
+  // Metodo ejecutado al momento en que este componente es creado por Angular
+  constructor() {    
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
     // ES6 arrow function
     // () => {}
-
    }
 
   ngOnInit() {
   }
 
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
+  }
 }
