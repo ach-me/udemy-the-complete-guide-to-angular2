@@ -35,5 +35,6 @@
 <p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
 <!-- *ngIf, directiva estructural de angular. Las directivas estructurales modifican el DOM, agregan o eliminan elementos -->
 
-<app-server></app-server>
-<app-server></app-server>
+
+<app-server *ngFor="let server of servers"></app-server>
+<!-- let es la palabra clave que permite definir una variable temporal para el loop  -->
