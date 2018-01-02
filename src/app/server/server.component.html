@@ -1,7 +1,11 @@
-<p [ngStyle]="{backgroundColor: getColor()}">
+<p 
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">
   {{'Server'}} with ID {{serverId}} is {{getServerStatus()}}
 </p>
 
-<!-- ngStyle es una directiva nativa de Angular -->
+<!-- ngStyle es una directiva nativa de Angular. Permite asignar estilos dinámicamente -->
 <!-- Las directivas de atributos solo cambian los elementos en las que están declaradas. Lucen como atributos HTML y empiezan sin * -->
 <!-- Los corchetes no son parte de la declaración de la directa, sólo indican que se quiere bindear una propiedad a esta directiva -->
+
+<!-- ngClass permite agregar o quitar clases -->
