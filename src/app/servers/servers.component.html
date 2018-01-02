@@ -30,6 +30,9 @@
 <!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- String interpolation -->
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+
+<p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
+<!-- *ngIf, directiva estructural de angular que modifica el DOM -->
 <app-server></app-server>
 <app-server></app-server>
