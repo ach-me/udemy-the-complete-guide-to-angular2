@@ -1,3 +1,7 @@
-<p>
+<p [ngStyle]="{backgroundColor: getColor()}">
   {{'Server'}} with ID {{serverId}} is {{getServerStatus()}}
 </p>
+
+<!-- ngStyle es una directiva nativa de Angular -->
+<!-- Las directivas de atributos solo cambian los elementos en las que están declaradas. Lucen como atributos HTML y empiezan sin * -->
+<!-- Los corchetes no son parte de la declaración de la directa, sólo indican que se quiere bindear una propiedad a esta directiva -->
