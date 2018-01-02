@@ -1,9 +1,19 @@
 <label>Server Name</label>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
 <!-- Será actualizado en cada ingreso de caracter -->
 <!-- $event es un nombre de variable reservado que se puede usar en un template cuando se usa event binding -->
 
-<p>{{serverName}}</p>
+<!-- Otra forma de obtener datos -->
+<!-- Two way data binding -->
+<!-- Se combina property y event binding -->
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="serverName">
+
+<!-- ngModel es una directiva -->
+
+<!-- <p>{{serverName}}</p> -->
 
 <button 
     class="btn btn-primary"
